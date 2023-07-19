@@ -102,7 +102,7 @@ const NavLink = styled(Typography)`
 `;
 
 const NavLinkContainer = styled.div`
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
