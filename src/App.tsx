@@ -23,7 +23,9 @@ const Portfolio = () => {
 };
 
 function App() {
-    const showSitePlaceholder = import.meta.env.PROD;
+    const showSitePlaceholder =
+        import.meta.env.PROD || localStorage.getItem('showSiteAnyways');
+
     return (
         <ThemeProvider theme={theme}>
             {showSitePlaceholder ? <SiteInProgress /> : <Portfolio />}

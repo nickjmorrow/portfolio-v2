@@ -4,7 +4,7 @@ import { theme } from 'src/modules/theming';
 export const TextLink = styled.a`
     font-family: ${theme.fontFamilies.default};
     text-decoration: none;
-    color: ${theme.coreColor.cs5};
+    color: ${theme.coreColor.cs3};
     cursor: pointer;
     font-weight: 600;
     transition: all ${theme.transitions.fast};

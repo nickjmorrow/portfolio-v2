@@ -76,13 +76,13 @@ const Header = styled.span`
     margin-bottom: ${theme.spacing.ss2};
     display: block;
     font-size: ${theme.fontSizes.fs5};
-    color: ${theme.neutralColor.cs9};
+    color: ${theme.neutralColor.cs1};
     font-weight: 500;
 `;
 
 const Timeline = styled.div`
     font-family: ${theme.fontFamilies.default};
-    color: ${theme.neutralColor.cs7};
+    color: ${theme.neutralColor.cs1};
     font-weight: 300;
     font-size: ${theme.fontSizes.fs2};
 `;
@@ -97,5 +97,5 @@ const ExperienceDetail = styled.li`
     font-family: ${theme.fontFamilies.default};
     margin-bottom: ${theme.spacing.ss4};
     line-height: ${theme.lineHeights.default};
-    color: ${theme.neutralColor.cs7};
+    color: ${theme.neutralColor.cs1};
 `;

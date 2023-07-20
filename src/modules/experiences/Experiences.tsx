@@ -47,6 +47,7 @@ const CustomCard = styled(Card)`
     position: relative;
     top: -20px;
     min-height: 520px;
+    background-color: rgba(255, 255, 255, 0.1);
 `;
 
 const Content = styled.div`
