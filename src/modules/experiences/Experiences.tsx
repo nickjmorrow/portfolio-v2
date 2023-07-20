@@ -1,16 +1,13 @@
 // external
-import { animateRadialGradient } from 'src/modules/core/animateRadialGradient';
+import React, { useState } from 'react';
 import { Card } from 'src/modules/core/Card';
+import { CardHeader } from 'src/modules/core/CardHeader';
 import { Container } from 'src/modules/core/Container';
 import { data } from 'src/modules/core/data';
-import { GradientText } from 'src/modules/core/GradientText';
-import { radialGradient } from 'src/modules/core/radialGradient';
 import { CurrentExperience } from 'src/modules/experiences/CurrentExperience';
 import { ExperienceTimeline } from 'src/modules/experiences/ExperienceTimeline';
 import { theme } from 'src/modules/theming';
-import React, { useState } from 'react';
 import styled from 'styled-components';
-import { CardHeader } from 'src/modules/core/CardHeader';
 
 export const Experiences: React.FC = () => {
     const { experiences } = data;
@@ -35,29 +32,12 @@ export const Experiences: React.FC = () => {
                         <CurrentExperience experience={activeExperience} />
                     </Content>
                 </CustomCard>
-                <BottomCard />
             </CustomContainer>
         </>
     );
 };
 
-const CustomContainer = styled(Container)`
-    background-color: transparent;
-    min-height: 110vh;
-    ${animateRadialGradient}
-    ${radialGradient}
-`;
-
-const BottomCard = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    background-color: ${theme.neutralColor.cs1};
-    transform: skewY(10deg) scale(1.2, 4) rotate(-2deg);
-    border-radius: 30% 0% 30% 0%;
-    top: -150px;
-    z-index: -1;
-`;
+const CustomContainer = styled(Container)``;
 
 const CustomCard = styled(Card)`
     display: flex;

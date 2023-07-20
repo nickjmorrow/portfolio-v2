@@ -26,7 +26,7 @@ const skew = 4;
 
 export const Diagonal = styled('div')<Props>`
     animation: ${animate} 5s ease infinite;
-    ${(p) => css`
+    ${() => css`
         // position: absolute;
         height: 300px;
         width: 100%;

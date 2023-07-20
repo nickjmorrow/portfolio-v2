@@ -1,11 +1,8 @@
 // external
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { theme } from 'src/modules/theming';
 import { Experience } from 'src/modules/core/types';
-import { getHeapCodeStatistics } from 'v8';
-
-type Position = 'first' | 'middle' | 'last';
+import { theme } from 'src/modules/theming';
+import styled, { css } from 'styled-components';
 
 export const ExperienceTimeline: React.FC<{
     experiences: Experience[];
@@ -16,16 +13,6 @@ export const ExperienceTimeline: React.FC<{
         return a.startDate < b.startDate ? 1 : -1;
     });
 
-    const getPosition = (index: number): Position => {
-        switch (index) {
-            case 0:
-                return 'first';
-            case sortedExperiences.length - 1:
-                return 'last';
-            default:
-                return 'middle';
-        }
-    };
     return (
         <Container>
             {sortedExperiences.map((e, i) => (
@@ -56,7 +43,7 @@ const getBackgroundColor = (
     const maxHue = 220;
     const minHue = 240;
 
-    const lightnesses = new Array(numEntries).fill(null).map((e, i) => {
+    const lightnesses = new Array(numEntries).fill(null).map((_, i) => {
         const getValue = (high: number, low: number) =>
             low + (i / (numEntries - 1)) * (high - low);
         const lightness = getValue(highestLightness, lowestLightness);

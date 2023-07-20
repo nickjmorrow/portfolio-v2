@@ -26,7 +26,7 @@ export const ProjectIcons: React.FC<{ project: Project }> = ({ project }) => {
             </a>
             {project.demoUrl && (
                 <a
-                    href={project.demoUrl!}
+                    href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                 >

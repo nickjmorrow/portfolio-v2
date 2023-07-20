@@ -1,8 +1,7 @@
-import * as React from 'react';
-import { SvgProps } from 'src/modules/core/icons/SvgProps';
 import { DefaultIconSvg } from 'src/modules/core/icons/DefaultIconSvg';
+import { SvgProps } from 'src/modules/core/icons/SvgProps';
 
-export const ShareIcon: React.SFC<SvgProps> = ({ ...svgProps }) => (
+export const ShareIcon = ({ ...svgProps }: SvgProps) => (
     <DefaultIconSvg
         {...svgProps}
         fill="currentColor"

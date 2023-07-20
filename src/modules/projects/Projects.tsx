@@ -6,13 +6,11 @@ import { Project } from 'src/modules/core/types';
 import { FeaturedProject } from 'src/modules/projects/FeaturedProject';
 import { OtherProject } from 'src/modules/projects/OtherProject';
 import { theme } from 'src/modules/theming';
-import React from 'react';
 import styled from 'styled-components';
 
-export const Projects: React.FC = () => {
+export const Projects = () => {
     return (
         <CustomContainer id="projects">
-            <Top />
             <CardHeader
                 style={{
                     zIndex: 1,
@@ -38,7 +36,7 @@ export const Projects: React.FC = () => {
             <OtherProjectListContainer>
                 {data.projects
                     .sort(byOrderId)
-                    .filter((p, i) => i >= 3)
+                    .filter((_, i) => i >= 3)
                     .map((p) => (
                         <OtherProject project={p} key={p.projectId} />
                     ))}
@@ -74,15 +72,4 @@ const OtherProjectListContainer = styled.div`
     flex-wrap: wrap;
     max-width: 700px;
     gap: ${theme.spacing.ss8};
-`;
-
-const Top = styled.div`
-    height: 200px;
-    background-color: white;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    top: -100px;
-    transform: skewY(5deg) scale(1.05, 1);
-    border-radius: 200px;
 `;

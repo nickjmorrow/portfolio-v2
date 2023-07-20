@@ -1,6 +1,5 @@
-import styled from 'styled-components';
 import { Typography } from 'src/modules/core/Typography';
-import { theme } from 'src/modules/theming';
+import styled from 'styled-components';
 
 export const GradientText = styled(Typography)`
     background: linear-gradient(

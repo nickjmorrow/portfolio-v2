@@ -1,10 +1,9 @@
 // external
 import React from 'react';
-import styled from 'styled-components';
+import { TechnologyLink } from 'src/modules/about/TechnologyLink';
 import { data } from 'src/modules/core/data';
 import { theme } from 'src/modules/theming';
-import { TechnologyLink } from 'src/modules/about/TechnologyLink';
-import { Technology } from 'modules/core/types';
+import styled from 'styled-components';
 
 export const Skills: React.FC = () => {
     return (

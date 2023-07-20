@@ -1,18 +1,15 @@
 // external
-import { animateRadialGradient } from 'src/modules/core/animateRadialGradient';
-import { Button } from 'src/modules/core/Button';
-import { enterTimeouts } from 'src/modules/core/enterTimeouts';
-import { radialGradient } from 'src/modules/core/radialGradient';
-import { Typography } from 'src/modules/core/Typography';
-import { theme } from 'src/modules/theming';
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Button } from 'src/modules/core/Button';
+import { Typography } from 'src/modules/core/Typography';
+import { enterTimeouts } from 'src/modules/core/enterTimeouts';
+import { theme } from 'src/modules/theming';
 import styled, { keyframes } from 'styled-components';
 
 export const Landing: React.FC = () => {
     return (
         <>
-            <TopRight />
             <Container>
                 <NavLinkContainer>
                     <InnerNavLinkContainer>
@@ -30,13 +27,37 @@ export const Landing: React.FC = () => {
                         </a>
                     </InnerNavLinkContainer>
                 </NavLinkContainer>
-                <ColoredBackgroundContainer>
+                <ContentContainer>
                     <Name>Nicholas Morrow</Name>
-                </ColoredBackgroundContainer>
+                    <About>
+                        <Paragraph>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Sit amet porttitor eget dolor
+                            morbi non arcu. Mollis aliquam ut porttitor leo a
+                            diam sollicitudin.
+                        </Paragraph>
+                        <Paragraph>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Posuere urna nec tincidunt
+                            praesent semper. Consectetur adipiscing elit ut
+                            aliquam. Donec ac odio tempor orci.
+                        </Paragraph>
+                        <Paragraph>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Dolor sit amet consectetur
+                            adipiscing elit duis tristique.
+                        </Paragraph>
+                    </About>
+                </ContentContainer>
             </Container>
         </>
     );
 };
+
+const Paragraph = styled.p``;
 
 const navLinks = [
     {
@@ -56,16 +77,6 @@ const navLinks = [
         enterTimeout: enterTimeouts.contact,
     },
 ];
-
-const TopRight = styled.div`
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    background-color: ${theme.neutralColor.cs9};
-    transform: skewY(3deg) scale(2, 4) rotate(0deg);
-    border-radius: 0% 0% 30% 30%;
-    top: -50px;
-`;
 
 const changeBackgroundPosition = keyframes`
 	0% {
@@ -101,14 +112,21 @@ const NavLink = styled(Typography)`
     color: ${theme.neutralColor.cs1};
 `;
 
+const ContentContainer = styled.div`
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 100%;
+    display: flex;
+    column-gap: ${theme.spacing.ss16};
+    height: max-content;
+`;
+
 const NavLinkContainer = styled.div`
-    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    top: 0px;
     width: 100%;
-    z-index: 2;
     background-color: ${theme.neutralColor.cs9};
 `;
 
@@ -116,17 +134,6 @@ const InnerNavLinkContainer = styled.div`
     display: flex;
     gap: 0px ${theme.spacing.ss8};
     padding: ${theme.spacing.ss8} ${theme.spacing.ss8};
-`;
-
-const ColoredBackgroundContainer = styled.div`
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    // z-index: -1;
-    width: 100%;
-    ${animateRadialGradient}
-    ${radialGradient}
 `;
 
 const Container = styled.div`
@@ -137,8 +144,10 @@ const Name = styled.span`
     font-size: ${theme.fontSizes.fs11};
     font-family: ${theme.fontFamilies.title};
     color: ${theme.backgroundColor};
-    margin-left: 15%;
     font-weight: 700;
     letter-spacing: 2px;
-    position: relative;
+`;
+
+const About = styled.div`
+    max-width: 600px;
 `;

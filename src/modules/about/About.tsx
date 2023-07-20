@@ -11,7 +11,6 @@ import { CardHeader } from 'src/modules/core/CardHeader';
 export const About: React.FC = () => {
     return (
         <Container id="about">
-            <TopRight />
             <CustomCard>
                 <CardHeader>About</CardHeader>
                 <Bottom>
@@ -35,16 +34,6 @@ export const About: React.FC = () => {
         </Container>
     );
 };
-
-const TopRight = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    background-color: ${theme.neutralColor.cs1};
-    transform: skewY(4deg) scale(1.2, 4) rotate(0deg);
-    border-radius: 30% 0% 30% 0%;
-    top: -10px;
-`;
 
 const Bottom = styled.div`
     display: flex;

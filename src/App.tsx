@@ -1,31 +1,46 @@
-import { ThemeProvider, styled } from 'styled-components';
-import './App.css';
-import { About } from 'src/modules/about/About';
 import { Contact } from 'src/modules/contact/Contact';
 import { Experiences } from 'src/modules/experiences/Experiences';
 import { Landing } from 'src/modules/landing/Landing';
 import { Projects } from 'src/modules/projects/Projects';
 import { theme } from 'src/modules/theming/theme';
+import { ThemeProvider, styled } from 'styled-components';
+import './App.css';
+import { animateRadialGradient } from 'src/modules/core/animateRadialGradient';
+import { radialGradient } from 'src/modules/core/radialGradient';
 
-function App() {
+const Portfolio = () => {
     return (
-        <ThemeProvider theme={theme}>
+        <ColoredBackgroundContainer>
             <Container>
                 <Landing />
-                <About />
                 <Experiences />
                 <Projects />
                 <Contact />
             </Container>
+        </ColoredBackgroundContainer>
+    );
+};
+
+function App() {
+    return (
+        <ThemeProvider theme={theme}>
+            <Portfolio />
         </ThemeProvider>
     );
 }
 
 const Container = styled.div`
-    background: white;
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
+`;
+
+const ColoredBackgroundContainer = styled.div`
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    ${animateRadialGradient}
+    ${radialGradient}
 `;
 
 export default App;

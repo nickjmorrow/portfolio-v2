@@ -1,8 +1,7 @@
-import React from 'react';
 import { DefaultIconSvg } from 'src/modules/core/icons/DefaultIconSvg';
 import { SvgProps } from 'src/modules/core/icons/SvgProps';
 
-export const GithubIcon: React.SFC<SvgProps> = ({ ...svgProps }) => (
+export const GithubIcon = ({ ...svgProps }: SvgProps) => (
     <DefaultIconSvg
         {...svgProps}
         xmlns="http://www.w3.org/2000/svg"

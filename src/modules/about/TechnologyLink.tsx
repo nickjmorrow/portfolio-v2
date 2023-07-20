@@ -1,9 +1,8 @@
 // external
 import React from 'react';
-import styled from 'styled-components';
 import { Technology } from 'src/modules/core/types';
-import { Typography } from 'src/modules/core/Typography';
 import { theme } from 'src/modules/theming';
+import styled from 'styled-components';
 
 export const TechnologyLink: React.FC<{
     technology: Technology;
