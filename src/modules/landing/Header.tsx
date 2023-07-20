@@ -2,6 +2,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Button } from 'src/modules/core/Button';
 import { Typography } from 'src/modules/core/Typography';
 import { enterTimeouts } from 'src/modules/core/enterTimeouts';
+import { HORIZONTAL_MARGIN } from 'src/modules/landing/constants';
 import { theme } from 'src/modules/theming';
 import styled, { keyframes } from 'styled-components';
 
@@ -18,9 +19,9 @@ export const Header = () => {
                         <NavLink>{nl.label}</NavLink>
                     </AnchorLink>
                 ))}
-                <a download href="/resume.pdf">
+                {/* <a download href="/resume.pdf">
                     <ResumeButton>Resume</ResumeButton>
-                </a>
+                </a> */}
             </InnerNavLinkContainer>
         </NavLinkContainer>
     );
@@ -89,5 +90,5 @@ const NavLinkContainer = styled.div`
 const InnerNavLinkContainer = styled.div`
     display: flex;
     gap: 0px ${theme.spacing.ss8};
-    padding: ${theme.spacing.ss8} ${theme.spacing.ss8};
+    padding: ${theme.spacing.ss8} ${HORIZONTAL_MARGIN};
 `;
