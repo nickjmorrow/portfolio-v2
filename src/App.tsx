@@ -7,6 +7,7 @@ import { ThemeProvider, styled } from 'styled-components';
 import './App.css';
 import { animateRadialGradient } from 'src/modules/core/animateRadialGradient';
 import { radialGradient } from 'src/modules/core/radialGradient';
+import { SiteInProgress } from 'src/modules/core/SiteInProgress';
 
 const Portfolio = () => {
     return (
@@ -22,9 +23,10 @@ const Portfolio = () => {
 };
 
 function App() {
+    const showSitePlaceholder = import.meta.env.PROD;
     return (
         <ThemeProvider theme={theme}>
-            <Portfolio />
+            {showSitePlaceholder ? <SiteInProgress /> : <Portfolio />}
         </ThemeProvider>
     );
 }
