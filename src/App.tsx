@@ -1,9 +1,7 @@
 import { SiteInProgress } from 'src/modules/core/SiteInProgress';
-import { animateRadialGradient } from 'src/modules/core/animateRadialGradient';
-import { radialGradient } from 'src/modules/core/radialGradient';
 import { Layout } from 'src/modules/main/Layout';
 import { theme } from 'src/modules/theming/theme';
-import { ThemeProvider, styled } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import './App.css';
 
 function App() {

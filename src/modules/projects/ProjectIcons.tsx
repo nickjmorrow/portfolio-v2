@@ -42,7 +42,7 @@ export const ProjectIcons: React.FC<{ project: Project }> = ({ project }) => {
 const IconContainer = styled.div``;
 
 const hoverableCss = css`
-    color: ${theme.neutralColor.cs9};
+    color: ${theme.neutralColor.cs1};
     transition: all ${theme.transitions.fast};
     &:hover {
         transition: all ${theme.transitions.fast};

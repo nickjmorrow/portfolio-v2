@@ -4,31 +4,7 @@ import { Experience } from 'src/modules/core/types';
 import { theme } from 'src/modules/theming';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-
-const monthNames = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-];
-
-const getFormattedDate = (date: Date | null): string => {
-    if (date === null) {
-        return 'Present';
-    }
-
-    const month = monthNames[date.getMonth()];
-    const year = date.getFullYear();
-    return `${month} ${year}`;
-};
+import { getFormattedDate } from 'src/modules/core/date.utils';
 
 export const CurrentExperience: React.FC<{
     experience: Experience;

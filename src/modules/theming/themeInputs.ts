@@ -15,7 +15,7 @@ const defaultAccentPaletteInputs = {
 
 const defaultNeutralPaletteInputs = {
     ...defaultCorePaletteInputs,
-    saturation: 5,
+    saturation: 0,
     middleLightness: 60,
     lightnessIncrement: 12,
     lightnessDecrement: 13,
@@ -48,8 +48,8 @@ const defaultBorderStyleInputs = {
 };
 
 const defaultBorderRadiusInputs = {
-    br1: 10,
-    br2: 20,
+    br1: 4,
+    br2: 12,
 };
 
 const defaultIconSizeInputs = {

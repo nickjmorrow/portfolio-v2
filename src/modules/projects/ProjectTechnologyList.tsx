@@ -27,7 +27,7 @@ const TechnologyListContainer = styled.ul`
 `;
 
 const TechnologyListItem = styled.li`
-    color: ${theme.neutralColor.cs9};
+    color: ${theme.neutralColor.cs1};
     font-family: ${theme.fontFamilies.monospace};
     display: inline;
     margin-right: ${theme.spacing.ss2};

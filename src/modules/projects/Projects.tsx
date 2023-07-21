@@ -1,75 +1,41 @@
 // external
-import { CardHeader } from 'src/modules/core/CardHeader';
-import { Container } from 'src/modules/core/Container';
+import { Section } from 'src/modules/core/Section';
 import { data } from 'src/modules/core/data';
-import { Project } from 'src/modules/core/types';
-import { FeaturedProject } from 'src/modules/projects/FeaturedProject';
-import { OtherProject } from 'src/modules/projects/OtherProject';
+import { Project as ProjectType } from 'src/modules/core/types';
+import { Project } from 'src/modules/projects/Project';
 import { theme } from 'src/modules/theming';
 import styled from 'styled-components';
 
 export const Projects = () => {
+    const renderProject = (project: ProjectType) => (
+        <Project key={project.projectId} project={project} />
+    );
+
     return (
-        <CustomContainer id="projects">
-            <CardHeader
-                style={{
-                    zIndex: 1,
-                    paddingBottom: '3px',
-                    marginBottom: theme.spacing.ss16,
-                    width: '80%',
-                }}
-            >
-                Projects
-            </CardHeader>
-            <FeaturedProjectListContainer>
-                {data.projects
-                    .sort(byOrderId)
-                    .filter((_, i) => i < 3)
-                    .map((p, i) => (
-                        <FeaturedProject
-                            project={p}
-                            key={p.projectId}
-                            index={i}
-                        />
-                    ))}
-            </FeaturedProjectListContainer>
-            <OtherProjectListContainer>
-                {data.projects
-                    .sort(byOrderId)
-                    .filter((_, i) => i >= 3)
-                    .map((p) => (
-                        <OtherProject project={p} key={p.projectId} />
-                    ))}
-            </OtherProjectListContainer>
-        </CustomContainer>
+        <Section
+            id="projects"
+            header="Projects"
+            content={
+                <ProjectListContainer>
+                    {data.projects
+                        .sort(byOrderId)
+                        .filter((_, i) => i < 3)
+                        .map(renderProject)}
+                </ProjectListContainer>
+            }
+        />
     );
 };
 
-const byOrderId = (a: Project, b: Project) => (a.orderId < b.orderId ? -1 : 1);
+const byOrderId = (a: ProjectType, b: ProjectType) =>
+    a.orderId < b.orderId ? -1 : 1;
 
-const CustomContainer = styled(Container)`
-    box-shadow: none;
-    padding-bottom: ${theme.spacing.ss32};
-`;
-
-const FeaturedProjectListContainer = styled.div`
+const ProjectListContainer = styled.div`
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: ${theme.spacing.ss16};
+    row-gap: ${theme.spacing.ss8};
     margin-bottom: ${theme.spacing.ss16};
-`;
-
-const OtherProjectListContainer = styled.div`
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 700px;
-    gap: ${theme.spacing.ss8};
 `;

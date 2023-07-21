@@ -1,59 +1,23 @@
 // external
-import React, { useState } from 'react';
-import { Card } from 'src/modules/core/Card';
-import { CardHeader } from 'src/modules/core/CardHeader';
+import React from 'react';
 import { Container } from 'src/modules/core/Container';
+import { Section } from 'src/modules/core/Section';
 import { data } from 'src/modules/core/data';
-import { CurrentExperience } from 'src/modules/experiences/CurrentExperience';
-import { ExperienceTimeline } from 'src/modules/experiences/ExperienceTimeline';
-import { theme } from 'src/modules/theming';
+import { ExperienceList } from 'src/modules/experiences/ExperienceList';
 import styled from 'styled-components';
 
 export const Experiences: React.FC = () => {
     const { experiences } = data;
-    const sortedExperiences = experiences.sort((a, b) => {
-        return a.startDate < b.startDate ? 1 : -1;
-    });
-    const [activeExperience, setActiveExperience] = useState(
-        sortedExperiences[0]
-    );
 
     return (
-        <>
-            <CustomContainer id="experiences">
-                <CustomCard>
-                    <CardHeader>Experiences</CardHeader>
-                    <Content>
-                        <ExperienceTimeline
-                            experiences={sortedExperiences}
-                            activeExperience={activeExperience}
-                            setActiveExperience={setActiveExperience}
-                        />
-                        <CurrentExperience experience={activeExperience} />
-                    </Content>
-                </CustomCard>
-            </CustomContainer>
-        </>
+        <CustomContainer id="experiences">
+            <Section
+                header="Experiences"
+                id="experiences"
+                content={<ExperienceList experiences={experiences} />}
+            />
+        </CustomContainer>
     );
 };
 
 const CustomContainer = styled(Container)``;
-
-const CustomCard = styled(Card)`
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: ${theme.spacing.ss8};
-    position: relative;
-    top: -20px;
-    min-height: 520px;
-    background-color: rgba(255, 255, 255, 0.1);
-`;
-
-const Content = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: ${theme.spacing.ss8};
-    justify-content: center;
-`;

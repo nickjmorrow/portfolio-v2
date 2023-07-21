@@ -26,27 +26,39 @@ export const Layout = () => {
     );
 };
 
+const HORIZONTAL_SPACING = theme.spacing.ss32;
+
 const Container = styled.div`
-    height: 100vh;
     display: flex;
-    column-gap: ${theme.spacing.ss32};
-    margin: 0 ${theme.spacing.ss32};
+    flex-direction: row;
+    height: 100vh;
+    column-gap: ${theme.spacing.ss24};
+    margin-left: ${HORIZONTAL_SPACING};
+    @media (max-width: 800px) {
+        flex-direction: column;
+        column-gap: 0px;
+        height: auto;
+    }
 `;
 
 const PADDING_TOP = theme.spacing.ss32;
 
 const LeftSide = styled.div`
-    width: max-content;
-    padding-top: ${PADDING_TOP};
+    padding-top: calc(${PADDING_TOP} - 16px);
+    min-width: 500px;
 `;
 
 const RightSide = styled.div`
-    max-height: 100%;
+    padding-top: ${PADDING_TOP};
+    max-height: 100vh;
+    @media (max-width: 800px) {
+        max-height: unset;
+    }
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     row-gap: ${theme.spacing.ss64};
-    padding-top: ${PADDING_TOP};
+    padding-right: ${HORIZONTAL_SPACING};
 `;
 
 const ColoredBackgroundContainer = styled.div`
