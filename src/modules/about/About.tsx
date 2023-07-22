@@ -13,19 +13,7 @@ export const About: React.FC = () => {
                     aliqua. Sit amet porttitor eget dolor morbi non arcu. Mollis
                     aliquam ut porttitor leo a diam sollicitudin.
                 </Paragraph>
-                <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Posuere urna nec tincidunt praesent semper.
-                    Consectetur adipiscing elit ut aliquam. Donec ac odio tempor
-                    orci.
-                </Paragraph>
-                <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Dolor sit amet consectetur adipiscing elit duis
-                    tristique.
-                </Paragraph>
+                <Paragraph></Paragraph>
             </ParagraphListContainer>
         </Container>
     );

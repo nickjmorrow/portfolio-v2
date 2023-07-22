@@ -9,7 +9,7 @@ import styled from 'styled-components';
 export const Project = ({ project }: { project: ProjectType }) => {
     return (
         <Container>
-            <ProjectImage />
+            <ProjectImage>Coming Soon!</ProjectImage>
             <ProjectInfo>
                 <Name>{project.name}</Name>
                 <ProjectDetails>
@@ -31,8 +31,13 @@ const ProjectImage = styled.div`
     min-width: 150px;
     height: 100px;
     background-color: black;
-    opacity: 0.2;
+    opacity: 0.9;
     border-radius: ${theme.borderRadius.br1};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${theme.neutralColor.cs6};
+    font-family: ${theme.fontFamilies.cursive};
 `;
 
 const ProjectDetails = styled.div`

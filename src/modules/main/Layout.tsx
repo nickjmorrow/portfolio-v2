@@ -59,6 +59,7 @@ const RightSide = styled.div`
     flex-direction: column;
     row-gap: ${theme.spacing.ss64};
     padding-right: ${HORIZONTAL_SPACING};
+    padding-bottom: ${theme.spacing.ss16};
 `;
 
 const ColoredBackgroundContainer = styled.div`

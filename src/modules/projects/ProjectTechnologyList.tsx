@@ -23,12 +23,16 @@ const TechnologyListContainer = styled.ul`
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
-    line-height: ${theme.lineHeights.default};
+    row-gap: ${theme.spacing.ss2};
 `;
 
 const TechnologyListItem = styled.li`
-    color: ${theme.neutralColor.cs1};
-    font-family: ${theme.fontFamilies.monospace};
+    color: ${theme.coreColor.cs1};
+    font-size: ${theme.fontSizes.fs2};
     display: inline;
     margin-right: ${theme.spacing.ss2};
+    background-color: ${theme.coreColor.cs7};
+    padding: 2px ${theme.spacing.ss2};
+    font-weight: ${theme.fontWeights.fw5};
+    border-radius: ${theme.borderRadius.br2};
 `;
