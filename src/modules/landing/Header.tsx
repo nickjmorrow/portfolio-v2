@@ -1,10 +1,9 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Button } from 'src/modules/core/Button';
 import { Typography } from 'src/modules/core/Typography';
 import { enterTimeouts } from 'src/modules/core/enterTimeouts';
 import { HORIZONTAL_MARGIN } from 'src/modules/landing/constants';
 import { theme } from 'src/modules/theming';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Header = () => {
     return (
@@ -45,34 +44,6 @@ const navLinks = [
         enterTimeout: enterTimeouts.contact,
     },
 ];
-
-const changeBackgroundPosition = keyframes`
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-`;
-
-const ResumeButton = styled(Button)`
-    background: linear-gradient(
-        60deg,
-        #f79533,
-        #f37055,
-        #ef4e7b,
-        #a166ab,
-        #5073b8,
-        #1098ad,
-        #07b39b,
-        #6fba82
-    );
-    background-size: 300% 300%;
-    animation: ${changeBackgroundPosition} 5s ease infinite;
-`;
 
 const NavLink = styled(Typography)`
     display: block;

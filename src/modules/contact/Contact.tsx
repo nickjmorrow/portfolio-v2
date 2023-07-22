@@ -1,8 +1,5 @@
 // external
 import React from 'react';
-import { Card } from 'src/modules/core/Card';
-import { CardHeader } from 'src/modules/core/CardHeader';
-import { Container } from 'src/modules/core/Container';
 import { Section } from 'src/modules/core/Section';
 import { Typography } from 'src/modules/core/Typography';
 import { theme } from 'src/modules/theming';

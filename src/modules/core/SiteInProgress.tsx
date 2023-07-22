@@ -2,9 +2,7 @@ import { Container } from 'src/modules/core/Container';
 import { theme } from 'src/modules/theming';
 import styled from 'styled-components';
 
-interface Props {}
-
-export const SiteInProgress = ({}: Props) => {
+export const SiteInProgress = () => {
     return (
         <CustomContainer>
             <ContentContainer>
