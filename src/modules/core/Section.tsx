@@ -24,7 +24,8 @@ const Container = styled.div`
 
 const Header = styled.h2`
     text-transform: uppercase;
-    font-size: ${theme.fontSizes.fs3};
+    font-size: ${theme.fontSizes.fs4};
+    font-weight: ${theme.fontWeights.fw7};
 `;
 
 const ContentContainer = styled.div``;

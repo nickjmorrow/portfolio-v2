@@ -43,9 +43,10 @@ const Container = styled.div`
 const PADDING_TOP = theme.spacing.ss32;
 
 const LeftSide = styled.div`
-    padding-top: calc(${PADDING_TOP} - 16px);
+    // padding-top: calc(${PADDING_TOP} - 16px);
     min-width: 500px;
     position: fixed;
+    height: 100vh;
 `;
 
 const RightSide = styled.div`

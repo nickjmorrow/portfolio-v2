@@ -1,4 +1,5 @@
 import { Tag } from 'src/modules/core/Tag';
+import { Text } from 'src/modules/core/Text';
 import { getFormattedDate } from 'src/modules/core/date.utils';
 import {
     ExperienceDetail as ExperienceDetailType,
@@ -59,8 +60,9 @@ const Container = styled.div`
     display: flex;
 `;
 
-const Dates = styled.div`
+const Dates = styled(Text)`
     min-width: 200px;
+    font-family: ${theme.fontFamilies.default};
 `;
 
 const ExperienceInfoContainer = styled.div`
@@ -74,7 +76,7 @@ const ExperienceInfoContainer = styled.div`
 
 const Title = styled.span``;
 
-const Heading = styled.span`
+const Heading = styled(Text)`
     font-size: ${theme.fontSizes.fs5};
     font-weight: ${theme.fontWeights.fw5};
 `;
