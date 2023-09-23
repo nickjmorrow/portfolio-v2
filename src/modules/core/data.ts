@@ -57,6 +57,21 @@ const sqlServer: Technology = {
     version: null,
 };
 
+const zenlytic: Experience = {
+    experienceId: 5,
+    name: 'Zenlytic',
+    roleName: 'Senior Software Engineer',
+    startDate: new Date(2022, 10, 10),
+    endDate: null,
+    technologies: [react, typescript],
+    experienceDetails: [
+        {
+            description:
+                'Worked in a team of 2 on an LLM-powered business intelligence application, React/TypeScript front-end.',
+        },
+    ],
+};
+
 const tempus: Experience = {
     experienceId: 4,
     name: 'Tempus',
@@ -247,7 +262,7 @@ export const data: Data = {
         weworkScheduler,
         blog,
     ],
-    experiences: [fora, mastercard, bwx, tempus],
+    experiences: [fora, mastercard, bwx, tempus, zenlytic],
     technologies: [
         typescript,
         react,
