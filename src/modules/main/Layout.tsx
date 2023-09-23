@@ -31,7 +31,6 @@ const HORIZONTAL_SPACING = theme.spacing.ss32;
 const Container = styled.div`
     display: flex;
     flex-direction: row;
-    height: 100vh;
     column-gap: ${theme.spacing.ss24};
     margin-left: ${HORIZONTAL_SPACING};
     @media (max-width: 800px) {
@@ -46,11 +45,11 @@ const PADDING_TOP = theme.spacing.ss32;
 const LeftSide = styled.div`
     padding-top: calc(${PADDING_TOP} - 16px);
     min-width: 500px;
+    position: fixed;
 `;
 
 const RightSide = styled.div`
     padding-top: ${PADDING_TOP};
-    max-height: 100vh;
     @media (max-width: 800px) {
         max-height: unset;
     }
@@ -58,6 +57,7 @@ const RightSide = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: ${theme.spacing.ss64};
+    margin-left: 500px;
     padding-right: ${HORIZONTAL_SPACING};
     padding-bottom: ${theme.spacing.ss16};
 `;
