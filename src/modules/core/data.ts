@@ -174,18 +174,6 @@ const bwx: Experience = {
     ],
 };
 
-const geoclustering: Project = {
-    projectId: 1,
-    orderId: 2,
-    technologies: [csharp, react, typescript],
-    name: 'Geoclustering',
-    tagline:
-        'Cluster locations in popular cities and view optimal paths between them for better sight-seeing.',
-    githubUrl: 'https://github.com/nickjmorrow/geoclustering',
-    demoUrl: null,
-    fileName: 'geoclustering.png',
-};
-
 const componentLibrary: Project = {
     projectId: 2,
     orderId: 1,
@@ -258,7 +246,6 @@ const blog: Project = {
 
 export const data: Data = {
     projects: [
-        geoclustering,
         componentLibrary,
         rankedChoice,
         breakbuilder,

@@ -34,7 +34,7 @@ const ProjectListContainer = styled.div`
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     row-gap: ${theme.spacing.ss8};
     margin-bottom: ${theme.spacing.ss16};
