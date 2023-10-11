@@ -1,5 +1,5 @@
 import { Tag } from 'src/modules/core/Tag';
-import { Text } from 'src/modules/core/Text';
+import { Text } from 'src/modules/core/components/text/Text';
 import { getFormattedDate } from 'src/modules/core/date.utils';
 import {
     ExperienceDetail as ExperienceDetailType,
@@ -63,6 +63,8 @@ const Container = styled.div`
 const Dates = styled(Text)`
     min-width: 200px;
     font-family: ${theme.fontFamilies.default};
+    opacity: 0.8;
+    font-size: ${theme.fontSizes.fs2};
 `;
 
 const ExperienceInfoContainer = styled.div`

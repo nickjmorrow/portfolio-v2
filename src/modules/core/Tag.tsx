@@ -1,4 +1,4 @@
-import { Text } from 'src/modules/core/Text';
+import { Text } from 'src/modules/core/components/text/Text';
 import { theme } from 'src/modules/theming';
 import styled from 'styled-components';
 

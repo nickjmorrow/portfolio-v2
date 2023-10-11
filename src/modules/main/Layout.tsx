@@ -43,10 +43,11 @@ const Container = styled.div`
 const PADDING_TOP = theme.spacing.ss32;
 
 const LeftSide = styled.div`
-    // padding-top: calc(${PADDING_TOP} - 16px);
     min-width: 500px;
     position: fixed;
     height: 100vh;
+    padding-top: ${PADDING_TOP};
+    top: -18px;
 `;
 
 const RightSide = styled.div`
@@ -58,7 +59,7 @@ const RightSide = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: ${theme.spacing.ss64};
-    margin-left: 500px;
+    margin-left: 600px;
     padding-right: ${HORIZONTAL_SPACING};
     padding-bottom: ${theme.spacing.ss16};
 `;

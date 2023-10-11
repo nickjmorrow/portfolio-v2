@@ -67,7 +67,11 @@ const zenlytic: Experience = {
     experienceDetails: [
         {
             description:
-                'Worked in a team of 2 on an LLM-powered business intelligence application, React/TypeScript front-end.',
+                'Worked in a frontend team of 2 for an LLM-powered business intelligence web application built with React and TypeScript.',
+        },
+        {
+            description:
+                'Developed features for data visualization, dashboard management, and chatbot interface.',
         },
     ],
 };

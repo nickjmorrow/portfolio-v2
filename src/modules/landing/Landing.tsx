@@ -3,7 +3,7 @@ import React from 'react';
 import { theme } from 'src/modules/theming';
 import styled from 'styled-components';
 
-export const Landing: React.FC = () => {
+export const Landing = () => {
     return (
         <Container>
             <UpperContent>
@@ -11,7 +11,6 @@ export const Landing: React.FC = () => {
                 <CurrentPosition>
                     Senior Front End Engineer at Zenlytic
                 </CurrentPosition>
-                <Tagline>I build frontend</Tagline>
             </UpperContent>
             <SocialMediaList></SocialMediaList>
         </Container>
@@ -26,7 +25,6 @@ const UpperContent = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: ${theme.spacing.ss2};
-    margin-top: ${theme.spacing.ss24};
 `;
 
 const Container = styled.div`
@@ -50,8 +48,4 @@ const CurrentPosition = styled.span`
     font-size: ${theme.fontSizes.fs5};
     color: ${theme.backgroundColor};
     font-weight: ${theme.fontWeights.fw5};
-`;
-
-const Tagline = styled.span`
-    font-family: ${theme.fontFamilies.default};
 `;
