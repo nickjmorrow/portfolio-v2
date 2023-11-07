@@ -62,6 +62,7 @@ const zenlytic: Experience = {
     name: 'Zenlytic',
     roleName: 'Senior Software Engineer',
     startDate: new Date(2022, 10, 10),
+    companyUrl: 'https://www.zenlytic.com',
     endDate: null,
     technologies: [react, typescript],
     experienceDetails: [

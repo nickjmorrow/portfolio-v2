@@ -1,5 +1,4 @@
 // external
-import React from 'react';
 import { theme } from 'src/modules/theming';
 import styled from 'styled-components';
 
