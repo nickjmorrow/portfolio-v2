@@ -1,4 +1,8 @@
 // external
+import { Link } from 'src/modules/core/Link';
+import { TextLink } from 'src/modules/core/TextLink';
+import { GithubIcon } from 'src/modules/core/icons/GithubIcon';
+import { LinkedInIcon } from 'src/modules/core/icons/LinkedInIcon';
 import { theme } from 'src/modules/theming';
 import styled from 'styled-components';
 
@@ -8,17 +12,26 @@ export const Landing = () => {
             <UpperContent>
                 <Name>Nicholas Morrow</Name>
                 <CurrentPosition>
-                    Senior Front End Engineer at Zenlytic
+                    Senior Front End Engineer at{' '}
+                    <TextLink href="https://zenlytic.com" target="_blank">
+                        Zenlytic
+                    </TextLink>
                 </CurrentPosition>
             </UpperContent>
-            <SocialMediaList></SocialMediaList>
+            <LowerContent>
+                <Link href="https://github.com/nickjmorrow" target="_blank">
+                    <GithubIcon />
+                </Link>
+                <Link
+                    href="https://www.linkedin.com/in/nickjmorrow/"
+                    target="_blank"
+                >
+                    <LinkedInIcon />
+                </Link>
+            </LowerContent>
         </Container>
     );
 };
-
-const SocialMediaList = styled.ul`
-    margin-bottom: ${theme.spacing.ss16};
-`;
 
 const UpperContent = styled.div`
     display: flex;
@@ -26,12 +39,17 @@ const UpperContent = styled.div`
     row-gap: ${theme.spacing.ss2};
 `;
 
+const LowerContent = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin-top: ${theme.spacing.ss8};
+    column-gap: ${theme.spacing.ss3};
+`;
+
 const Container = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
-    justify-content: space-between;
 `;
 
 const Name = styled.span`

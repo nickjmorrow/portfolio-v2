@@ -1,4 +1,6 @@
 import { Tag } from 'src/modules/core/Tag';
+import { TextLink } from 'src/modules/core/TextLink';
+import { UnorderedList } from 'src/modules/core/UnorderedList';
 import { Text } from 'src/modules/core/components/text/Text';
 import { getFormattedDate } from 'src/modules/core/date.utils';
 import {
@@ -36,7 +38,9 @@ export const Experience = ({ experience }: Props) => {
             <ExperienceInfoContainer>
                 <Heading>
                     <Title>{experience.roleName}</Title> at{' '}
-                    <CompanyName>{experience.name}</CompanyName>
+                    <CompanyName href={experience.companyUrl} target="_blank">
+                        {experience.name}
+                    </CompanyName>
                 </Heading>
                 <ExperienceDetailList>
                     {experience.experienceDetails.map(renderExperienceDetail)}
@@ -70,7 +74,6 @@ const Dates = styled(Text)`
 const ExperienceInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
-    row-gap: ${theme.spacing.ss4};
     max-width: 600px;
     position: relative;
     top: -3px;
@@ -83,11 +86,8 @@ const Heading = styled(Text)`
     font-weight: ${theme.fontWeights.fw5};
 `;
 
-const CompanyName = styled.span``;
+const CompanyName = styled(TextLink)``;
 
-const ExperienceDetailList = styled.div`
-    display: flex;
-    flex-direction: column;
-    row-gap: ${theme.spacing.ss2};
-    font-size: ${theme.fontSizes.fs2};
+const ExperienceDetailList = styled(UnorderedList)`
+    margin-top: ${theme.spacing.ss6};
 `;

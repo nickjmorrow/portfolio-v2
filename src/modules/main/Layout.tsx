@@ -55,7 +55,6 @@ const RightSide = styled.div`
     @media (max-width: 800px) {
         max-height: unset;
     }
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     row-gap: ${theme.spacing.ss64};

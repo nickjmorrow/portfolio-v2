@@ -195,7 +195,7 @@ const rankedChoice: Project = {
     tagline:
         'Create, vote, and simulate polls that use the ranked choice voting algorithm.',
     githubUrl: 'https://github.com/nickjmorrow/ranked-choice',
-    demoUrl: 'https://ranked-choice.netlify.app/',
+    demoUrl: null,
     fileName: 'ranked_choice.png',
 };
 
@@ -206,7 +206,7 @@ const breakbuilder: Project = {
     name: 'Breakbuilder',
     tagline: 'Plan out your yearly vacation and view related analytics.',
     githubUrl: 'https://github.com/nickjmorrow/breakbuilder',
-    demoUrl: 'https://breakbuilder.netlify.app',
+    demoUrl: null,
     fileName: 'breakbuilder.png',
 };
 

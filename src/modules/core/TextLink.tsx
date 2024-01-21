@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 import { theme } from 'src/modules/theming';
+import { Link } from 'src/modules/core/Link';
 
-export const TextLink = styled.a`
+export const TextLink = styled(Link)`
     font-family: ${theme.fontFamilies.default};
     text-decoration: none;
-    color: ${theme.coreColor.cs3};
-    cursor: pointer;
     font-weight: 600;
     transition: all ${theme.transitions.fast};
+    color: ${theme.coreColor.cs4};
     &:hover {
-        color: ${theme.coreColor.cs3};
         transition: all ${theme.transitions.fast};
     }
 `;

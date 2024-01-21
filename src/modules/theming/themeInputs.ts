@@ -1,5 +1,5 @@
 const defaultCorePaletteInputs = {
-    hue: 270, // hsl(220, 100%, 50%)
+    hue: 240, // hsl(220, 100%, 50%)
     middleLightness: 50,
     lightnessIncrement: 10,
     lightnessDecrement: 10,
@@ -60,8 +60,11 @@ const defaultIconSizeInputs = {
 };
 
 const defaultFontWeightInputs = {
+    fw4: 400,
     fw5: 500,
+    fw6: 600,
     fw7: 700,
+    fw8: 800,
     fw9: 900,
 };
 

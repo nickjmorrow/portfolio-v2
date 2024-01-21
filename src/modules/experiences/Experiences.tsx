@@ -1,12 +1,11 @@
 // external
-import React from 'react';
 import { Container } from 'src/modules/core/Container';
 import { Section } from 'src/modules/core/Section';
 import { data } from 'src/modules/core/data';
 import { ExperienceList } from 'src/modules/experiences/ExperienceList';
 import styled from 'styled-components';
 
-export const Experiences: React.FC = () => {
+export const Experiences = () => {
     const { experiences } = data;
 
     return (
