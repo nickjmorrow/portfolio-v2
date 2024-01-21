@@ -1,5 +1,5 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Typography } from 'src/modules/core/Typography';
+import { Text } from 'src/modules/core/Text';
 import { enterTimeouts } from 'src/modules/core/enterTimeouts';
 import { HORIZONTAL_MARGIN } from 'src/modules/landing/constants';
 import { theme } from 'src/modules/theming';
@@ -45,7 +45,7 @@ const navLinks = [
     },
 ];
 
-const NavLink = styled(Typography)`
+const NavLink = styled(Text)`
     display: block;
     padding: ${theme.spacing.ss4} ${theme.spacing.ss2};
     color: ${theme.neutralColor.cs1};

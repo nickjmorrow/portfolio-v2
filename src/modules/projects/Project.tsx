@@ -1,5 +1,5 @@
 // external
-import { Typography } from 'src/modules/core/Typography';
+import { Text } from 'src/modules/core/Text';
 import { Project as ProjectType } from 'src/modules/core/types';
 import { ProjectIcons } from 'src/modules/projects/ProjectIcons';
 import { ProjectTechnologyList } from 'src/modules/projects/ProjectTechnologyList';
@@ -32,14 +32,14 @@ const ProjectDetails = styled.div`
     color: ${theme.neutralColor.cs2};
 `;
 
-const Name = styled(Typography)`
+const Name = styled(Text)`
     font-weight: bold;
     font-size: ${theme.fontSizes.fs6};
     color: ${theme.neutralColor.cs1};
     z-index: 1;
 `;
 
-const Tagline = styled(Typography)`
+const Tagline = styled(Text)`
     display: block;
     font-size: ${theme.fontSizes.fs3};
     color: ${theme.neutralColor.cs2};

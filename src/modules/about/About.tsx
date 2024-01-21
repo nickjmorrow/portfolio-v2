@@ -1,6 +1,6 @@
 import { UnorderedList } from 'src/modules/core/UnorderedList';
 import { UnorderedListItem } from 'src/modules/core/UnorderedListItem';
-import { Text } from 'src/modules/core/components/text/Text';
+import { Text } from 'src/modules/core/Text';
 import { theme } from 'src/modules/theming';
 import styled, { css } from 'styled-components';
 
@@ -12,10 +12,6 @@ export const About = () => {
                     Hi! My name's Nick. I live in Chicago and work remotely. I
                     do frontend software development. I like making web apps
                     that are fun to use and feel a bit like magic paper.
-                </AboutText>
-                <AboutText>
-                    I'm currently working at Zenlytic, a B2B startup with an
-                    LLM-powered business intelligence platform.
                 </AboutText>
                 <AboutText>
                     For any new opportunities, I'm particularly looking for the
@@ -39,14 +35,16 @@ export const About = () => {
     );
 };
 
+const OPACITY = 0.8;
+
 const AboutListItem = ({ children }: { children: React.ReactNode }) => (
-    <UnorderedListItem bulletStyles={{ opacity: '0.7' }}>
+    <UnorderedListItem bulletStyles={{ opacity: OPACITY }}>
         {children}
     </UnorderedListItem>
 );
 
 const aboutStyles = css`
-    opacity: 0.7;
+    opacity: ${OPACITY};
     font-size: ${theme.fontSizes.fs5};
     font-weight: ${theme.fontWeights.fw4};
 `;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Typography } from 'src/modules/core/Typography';
+import { Text } from 'src/modules/core/Text';
 import { theme } from 'src/modules/theming';
 
-export const Tagline = styled(Typography)`
+export const Tagline = styled(Text)`
     display: block;
     font-size: ${theme.fontSizes.fs4};
     line-height: ${theme.lineHeights.title};

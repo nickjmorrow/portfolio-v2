@@ -1,7 +1,7 @@
 import { Tag } from 'src/modules/core/Tag';
 import { TextLink } from 'src/modules/core/TextLink';
 import { UnorderedList } from 'src/modules/core/UnorderedList';
-import { Text } from 'src/modules/core/components/text/Text';
+import { Text } from 'src/modules/core/Text';
 import { getFormattedDate } from 'src/modules/core/date.utils';
 import {
     ExperienceDetail as ExperienceDetailType,
@@ -57,7 +57,10 @@ const ExperienceTechnologyList = styled.ul`
     list-style: none;
     padding: 0;
     display: flex;
-    column-gap: ${theme.spacing.ss4};
+    column-gap: ${theme.spacing.ss2};
+    row-gap: ${theme.spacing.ss3};
+    max-width: 500px;
+    flex-wrap: wrap;
 `;
 
 const Container = styled.div`
@@ -67,8 +70,9 @@ const Container = styled.div`
 const Dates = styled(Text)`
     min-width: 200px;
     font-family: ${theme.fontFamilies.default};
-    opacity: 0.8;
+    opacity: 0.4;
     font-size: ${theme.fontSizes.fs2};
+    font-weight: ${theme.fontWeights.fw7};
 `;
 
 const ExperienceInfoContainer = styled.div`

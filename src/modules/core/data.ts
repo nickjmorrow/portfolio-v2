@@ -57,6 +57,41 @@ const sqlServer: Technology = {
     version: null,
 };
 
+const designSystems: Technology = {
+    technologyId: 8,
+    name: 'Design Systems',
+    orderId: 8,
+    version: null,
+};
+
+const dataVisualization: Technology = {
+    technologyId: 9,
+    name: 'Data Visualization',
+    orderId: 9,
+    version: null,
+};
+
+const nestJs: Technology = {
+    technologyId: 10,
+    name: 'Nest.js',
+    orderId: 10,
+    version: null,
+};
+
+const chakra: Technology = {
+    technologyId: 11,
+    name: 'Chakra UI',
+    orderId: 11,
+    version: null,
+};
+
+const vite: Technology = {
+    technologyId: 12,
+    name: 'Vite',
+    orderId: 12,
+    version: null,
+};
+
 const zenlytic: Experience = {
     experienceId: 5,
     name: 'Zenlytic',
@@ -64,11 +99,18 @@ const zenlytic: Experience = {
     startDate: new Date(2022, 10, 10),
     companyUrl: 'https://www.zenlytic.com',
     endDate: null,
-    technologies: [react, typescript],
+    technologies: [
+        react,
+        typescript,
+        designSystems,
+        dataVisualization,
+        chakra,
+        vite,
+    ],
     experienceDetails: [
         {
             description:
-                'Worked in a frontend team of 2 for an LLM-powered business intelligence web application built with React and TypeScript.',
+                'Worked in a frontend team of 2 on an LLM-powered business intelligence web application built with React and TypeScript.',
         },
         {
             description:
@@ -84,7 +126,7 @@ const tempus: Experience = {
     startDate: new Date(2020, 8, 28),
     endDate: new Date(2022, 5, 0),
     companyUrl: 'https://tempus.com',
-    technologies: [react, typescript, nodejs],
+    technologies: [react, typescript, nodejs, nestJs],
     experienceDetails: [
         {
             experienceDetailId: 1,

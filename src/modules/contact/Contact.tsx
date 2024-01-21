@@ -1,7 +1,7 @@
 // external
 import React from 'react';
 import { Section } from 'src/modules/core/Section';
-import { Typography } from 'src/modules/core/Typography';
+import { Text } from 'src/modules/core/Text';
 import { theme } from 'src/modules/theming';
 import styled from 'styled-components';
 
@@ -24,8 +24,8 @@ export const Contact: React.FC = () => {
     );
 };
 
-const Content = styled(Typography)`
+const Content = styled(Text)`
     display: block;
-    line-height: 36px;
+    line-height: 1.7;
     color: ${theme.neutralColor.cs1};
 `;
