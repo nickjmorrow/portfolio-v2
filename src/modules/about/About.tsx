@@ -9,9 +9,10 @@ export const About = () => {
         <Container id="about">
             <ParagraphListContainer>
                 <AboutText>
-                    Hi! My name's Nick. I live in Chicago and work remotely. I
-                    do frontend software development. I like making web apps
-                    that are fun to use and feel a bit like magic paper.
+                    Hi! My name's Nick. I live in the United States and work
+                    remotely. I do frontend software development. I like making
+                    web apps that are fun to use and feel a bit like magic
+                    paper.
                 </AboutText>
                 <AboutText>
                     For any new opportunities, I'm particularly looking for the
